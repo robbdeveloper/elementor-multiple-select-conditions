@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "behavior": {
+    "match": "first",
+    "preserveSelection": true,
+    "emptyText": "Select an option",
+    "noMatchText": "No options available"
+  },
+  "sources": ["guests", "number_events"],
+  "optionSets": {
+    "set1": [
+      { "value": "€30.000 – €45.000", "label": "€30.000 – €45.000" },
+      { "value": "€45.000 – €60.000", "label": "€45.000 – €60.000" }
+    ],
+    "set2": [
+      { "value": "€30.000 – €45.000", "label": "€30.000 – €45.000" },
+      { "value": "€45.000 – €60.000", "label": "€45.000 – €60.000" }
+    ]
+  },
+  "rules": [
+    {
+      "id": "rule_1",
+      "when": {
+        "all": [
+          {
+            "field": "guests",
+            "operator": "equals",
+            "value": "21/40"
+          },
+          {
+            "field": "number_events",
+            "operator": "equals",
+            "value": "Wedding Day Only"
+          }
+        ]
+      },
+      "use": "set1"
+    },
+    {
+      "id": "rule_2",
+      "when": {
+        "all": [
+          {
+            "field": "guests",
+            "operator": "equals",
+            "value": "41/60"
+          },
+          {
+            "field": "number_events",
+            "operator": "equals",
+            "value": "Wedding Day Only"
+          }
+        ]
+      },
+      "use": "set2"
+    }
+  ],
+  "default": {
+    "use": null
+  }
+}
