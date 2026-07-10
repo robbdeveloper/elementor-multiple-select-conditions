@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Elementor Dynamic Select
- * Plugin URI:  https://github.com/example/elementor-dynamic-select
+ * Plugin URI:  https://github.com/robbdeveloper/elementor-multiple-select-conditions
  * Description: Adds a Dynamic Select field to Elementor Pro forms with options driven by JSON rules and multi-select source fields.
  * Version:     1.0.1
  * Author:      Elementor Dynamic Select
